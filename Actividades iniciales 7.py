@@ -1,0 +1,10 @@
+#programa que calcule dos operandos con los 7 operadores vistos en clase. ¿Cómo puedes forzar que el resultado de la división tenga 2 decimales?
+variable1=float(input("introduce un número:"))
+variable2=float(input("introduce un número:"))
+print(round("resultado", 2(variable1+variable2)))
+print(round("resultado", 2(variable1-variable2)))
+print(round("resultado", 2(variable1*variable2)))
+print(round("resultado", 2(variable1/variable2)))
+print(round("resultado", 2(variable1//variable2)))
+print(round("resultado", 2(variable1%variable2)))
+print(round("resultado", 2(variable1**variable2)))
