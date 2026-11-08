@@ -1,22 +1,22 @@
-from math import sqrt
+# Programa que calcula una ecuación de segundo grado y controla el discriminante.
 
-# Calcula las soluciones reales de una ecuación de segundo grado.
-a = int(input("Introduce un número entero para la variable a: "))
-b = int(input("Introduce un número entero para la variable b: "))
-c = int(input("Introduce un número entero para la variable c: "))
+import math
+
+a = float(input("Introduce el valor de a: "))
+b = float(input("Introduce el valor de b: "))
+c = float(input("Introduce el valor de c: "))
 
 if a == 0:
-    print("No es una ecuación de segundo grado porque a no puede ser 0.")
+    print("El valor de a no puede ser 0: no es una ecuación de segundo grado.")
 else:
-    r = b**2 - 4 * a * c
+    discriminante = b**2 - 4 * a * c
 
-    if r < 0:
-        print("La ecuación no tiene soluciones reales.")
-    elif r == 0:
+    if discriminante < 0:
+        print("No hay soluciones reales: no se puede calcular la raíz cuadrada de un número negativo.")
+    elif discriminante == 0:
         x = -b / (2 * a)
-        print(f"La ecuación tiene una única solución: {x}")
+        print("Hay una única solución:", x)
     else:
-        x1 = (-b + sqrt(r)) / (2 * a)
-        x2 = (-b - sqrt(r)) / (2 * a)
-        print(f"Las soluciones son {x1} y {x2}.")
-    
+        x1 = (-b + math.sqrt(discriminante)) / (2 * a)
+        x2 = (-b - math.sqrt(discriminante)) / (2 * a)
+        print("Las soluciones son:", x1, "y", x2)
